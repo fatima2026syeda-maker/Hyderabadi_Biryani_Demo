@@ -1,11 +1,53 @@
 
 const menuItems = [
- {name:"Chicken Dum Biryani",ar:"برياني دجاج دم",description:"Aromatic basmati rice layered with tender chicken and signature spices.",arDescription:"أرز بسمتي عطري مع دجاج طري وتوابل مميزة.",price:"SAR 28",image:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=85"},
- {name:"Mutton Dum Biryani",ar:"برياني لحم ضأن دم",description:"A rich, slow-cooked classic inspired by Hyderabad.",arDescription:"طبق غني مطهو ببطء ومستوحى من حيدر آباد.",price:"SAR 38",image:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=85"},
- {name:"Veg Dum Biryani",ar:"برياني خضار دم",description:"Fragrant rice with seasonal vegetables and warming spices.",arDescription:"أرز عطري مع خضروات موسمية وتوابل دافئة.",price:"SAR 22",image:"https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=85"},
- {name:"Chicken 65",ar:"دجاج ٦٥",description:"Crispy, spicy chicken bites — a much-loved favourite.",arDescription:"قطع دجاج مقرمشة وحارة، من الأطباق المحبوبة.",price:"SAR 24",image:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=85"},
- {name:"Seekh Kebab",ar:"كباب سيخ",description:"Juicy kebabs grilled with a fragrant spice blend.",arDescription:"كباب طري مشوي بمزيج من التوابل العطرية.",price:"SAR 26",image:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=85"},
- {name:"Family Biryani",ar:"برياني عائلي",description:"A generous sharing portion for a table full of loved ones.",arDescription:"وجبة مشاركة سخية تجمع العائلة والأصدقاء.",price:"SAR 89",image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=85"}
+ {
+  name: "Chicken Dum Biryani",
+  ar: "برياني دجاج دم",
+  description: "Aromatic basmati rice layered with tender chicken and a delicious chicken leg piece.",
+  arDescription: "أرز بسمتي عطري مع دجاج طري وقطعة فخذ دجاج شهية.",
+  price: "SAR 28",
+  image: "https://images.squarespace-cdn.com/content/v1/6a3aa47eff561a164d0c97db/bf32e348-2752-4b8c-b43a-113760977949/Dum.png"
+ },
+ {
+  name: "Mutton Dum Biryani",
+  ar: "برياني لحم الضأن",
+  description: "Authentic Hyderabadi dum biryani with tender, bone-in mutton pieces.",
+  arDescription: "برياني حيدر آبادي أصيل مع قطع لحم ضأن طرية بالعظم.",
+  price: "SAR 38",
+  image: "https://www.emfaaz.com/images/mutton-chop-biryani-5.png"
+ },
+ {
+  name: "Mutton Khorma",
+  ar: "كورما لحم الضأن",
+  description: "Rich and flavourful mutton curry prepared with traditional spices.",
+  arDescription: "كاري لحم ضأن غني بالنكهة ومحضر بالتوابل التقليدية.",
+  price: "SAR 22",
+  image: "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Ch_960%2Cw_960/InstamartAssets/mutton_korma.webp"
+ },
+ {
+  name: "Butter Chicken",
+  ar: "دجاج بالزبدة",
+  description: "Tender chicken pieces in a rich, creamy tomato and butter gravy.",
+  arDescription: "قطع دجاج طرية في صلصة الطماطم والزبدة الكريمية الغنية.",
+  price: "SAR 24",
+  image: "https://www.skipthedishes.com/_next/image?q=75&url=https%3A%2F%2Fmenu-images-static.skipthedishes.com%2Fimages%2Fresized%2Flarge-33279c1cf373505456a4.jpg&w=3840"
+ },
+ {
+  name: "Seekh Kebab",
+  ar: "كباب سيخ",
+  description: "Juicy kebabs grilled with a fragrant spice blend.",
+  arDescription: "كباب طري مشوي بمزيج من التوابل العطرية.",
+  price: "SAR 26",
+  image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=85"
+ },
+ {
+  name: "Mutton Biryani Family Pack",
+  ar: "وجبة برياني لحم عائلية",
+  description: "A generous family-size serving of delicious Hyderabadi mutton biryani.",
+  arDescription: "وجبة عائلية سخية من برياني لحم الضأن الحيدر آبادي الشهي.",
+  price: "SAR 59",
+  image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=85"
+ }
 ];
 
 const grid = document.getElementById("menuGrid");
@@ -30,6 +72,7 @@ renderMenu();
 
 document.getElementById("languageToggle").addEventListener("click", () => {
  language = language === "en" ? "ar" : "en";
+
  document.documentElement.lang = language;
  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
 
@@ -57,7 +100,6 @@ nav.querySelectorAll("a").forEach(a => {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Replace with the restaurant's real WhatsApp number before publishing.
 const whatsappNumber = "966500000000";
 
 document.getElementById("whatsappLink").href =
