@@ -33,7 +33,7 @@ const menuItems = [
     description: "Tender chicken pieces in a rich, creamy tomato and butter gravy.",
     arDescription: "قطع دجاج طرية في صلصة الطماطم والزبدة الكريمية الغنية.",
     price: "SAR 24",
-    image: "https://www.skipthedishes.com/_next/image?q=75&url=https%3A%2F%2Fmenu-images-static.skipthedishes.com%2Fimages%2Fresized%2Flarge-33279c1cf373505456a4.jpg&w=3840"
+    image: "https://www.punjabijunctionva.com/images/menu/butter-chicken.png"
   },
   {
     name: "Seekh Kebab",
